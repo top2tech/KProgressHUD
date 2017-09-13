@@ -126,6 +126,11 @@ public class KProgressHUD {
         }
         return this;
     }
+	
+    public KProgressHUD setModalless() {
+        mProgressDialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL);   
+        return this;
+    }
 
     /**
      * Set HUD size. If not the HUD view will use WRAP_CONTENT instead
